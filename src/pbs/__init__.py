@@ -10,7 +10,7 @@ class PBS:
         f = opener.open(url)
         return json.load(f)
     
-    def bookshelf(self, memberid="", limit=15, offset=0):
+    def bookshelf(self, memberid="", limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'Bookshelf',
              'MemberID' : memberid,
@@ -22,7 +22,7 @@ class PBS:
         return self.getrequest(request)
 
 
-    def booksread(self, limit=15, offset=0):
+    def booksread(self, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'BooksRead',
              'MemberID' : memberid,
@@ -34,7 +34,7 @@ class PBS:
         return self.getrequest(request)
 
 
-    def clubwishlist(self, isbns, limit=15, offset=0):
+    def clubwishlist(self, isbns, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'ClubWishList',
              'Limit' : limit,
@@ -46,7 +46,7 @@ class PBS:
         return self.getrequest(request)
 
 
-    def isbnlist(self, isbns, limit=15, offset=0):
+    def isbnlist(self, isbns, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'ISBNList',
              'Limit' : limit,
@@ -59,7 +59,7 @@ class PBS:
         
 
 
-    def memberreviews(self, limit=15, offset=0):
+    def memberreviews(self, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'MemberReviews',
              'MemberID' : memberid,
@@ -72,7 +72,7 @@ class PBS:
 
 
 
-    def memberwishlist(self, limit=15, offset=0):
+    def memberwishlist(self, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'MemberWishList',
              'MemberID' : memberid,
@@ -85,7 +85,7 @@ class PBS:
 
 
 
-    def recentlyposted(self, limit=15, offset=0):
+    def recentlyposted(self, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'RecentlyPosted',
              'Limit' : limit,
@@ -97,7 +97,7 @@ class PBS:
 
 
 
-    def recentlyswapped(self, limit=15, offset=0):
+    def recentlyswapped(self, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'RecentlySwapped',
              'Limit' : limit,
@@ -109,7 +109,7 @@ class PBS:
 
 
 
-    def tbrpile(self, limit=15, offset=0):
+    def tbrpile(self, limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'TBRPile',
              'MemberID' : memberid,
