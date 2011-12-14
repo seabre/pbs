@@ -1,4 +1,3 @@
-# Example package with a console entry point
 import json
 import urllib
 import urllib2
