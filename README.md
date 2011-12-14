@@ -12,9 +12,11 @@ If everything went well, you should be good to go.
 
 ##Example script
 
-import pbs
-p = pbs.PBS()
-print p.recentlyswapped()
+`import pbs`
+
+`p = pbs.PBS()`
+
+`print p.recentlyswapped()`
 
 ##API Documentation
 
