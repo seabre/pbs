@@ -21,7 +21,7 @@ class PBS:
         return self.getrequest(request)
 
 
-    def booksread(self, limit=10, offset=0):
+    def booksread(self, memberid="", limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'BooksRead',
              'MemberID' : memberid,
@@ -58,7 +58,7 @@ class PBS:
         
 
 
-    def memberreviews(self, limit=10, offset=0):
+    def memberreviews(self, memberid="", limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'MemberReviews',
              'MemberID' : memberid,
@@ -71,7 +71,7 @@ class PBS:
 
 
 
-    def memberwishlist(self, limit=10, offset=0):
+    def memberwishlist(self, memberid="", limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'MemberWishList',
              'MemberID' : memberid,
@@ -108,7 +108,7 @@ class PBS:
 
 
 
-    def tbrpile(self, limit=10, offset=0):
+    def tbrpile(self, memberid="", limit=10, offset=0):
         params = urllib.urlencode(
             {'RequestType' : 'TBRPile',
              'MemberID' : memberid,
